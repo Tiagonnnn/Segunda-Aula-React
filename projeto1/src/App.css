@@ -1,0 +1,52 @@
+/*
+  App.css - Estilos globais do projeto1
+  Comentários explicativos em cada bloco
+*/
+
+#root {
+  max-width: 1280px; /* Largura máxima do conteúdo */
+  margin: 0 auto; /* Centraliza na tela */
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Estilo para o logo (caso usado) */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Animação de rotação para o logo */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Aplica animação ao logo se não houver preferência por movimento reduzido */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Cartão de conteúdo (caso usado) */
+.card {
+  padding: 2em;
+}
+
+/* Estilo para texto de documentação (caso usado) */
+.read-the-docs {
+  color: #888;
+}

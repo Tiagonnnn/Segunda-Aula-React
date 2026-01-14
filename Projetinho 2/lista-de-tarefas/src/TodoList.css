@@ -1,0 +1,166 @@
+/*
+  TodoList.css - Estilos para o componente de lista de tarefas
+  Comentários explicativos em cada bloco
+*/
+
+/* Importa a fonte Roboto do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Estilização global do body */
+body {
+  font-family: "Roboto", sans-serif; /* Fonte principal */
+  background: rgba(11, 40, 201, 0.555); /* Fundo azul translúcido */
+}
+
+/* Remove a borda de foco dos elementos (acessibilidade) */
+*:focus {
+  outline: none;
+}
+
+/* Título principal da página */
+h1 {
+  font-weight: 900;
+  color: rgb(7, 34, 65);
+  text-align: center;
+}
+
+/* Formulário de adicionar tarefa */
+form {
+  display: flex;
+  position: relative;
+  width: 600px;
+  height: 60px;
+  margin: 30px auto;
+  margin-bottom: 60px;
+}
+
+/* Campo de entrada de texto para nova tarefa */
+input {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  background: rgb(212, 212, 212);
+  border: none;
+  padding-left: 30px;
+  font-size: 16px;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+}
+
+/* Botão de adicionar tarefa */
+button.add {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgb(175, 174, 174);
+  border: none;
+  color: red;
+  cursor: pointer;
+  padding: 10px 25px;
+  height: 62px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+button.add:hover {
+  color: white;
+  background: rgb(138, 138, 138);
+}
+
+/* Container da lista de tarefas */
+.listaTarefas {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  width: 600px;
+  margin: auto;
+}
+
+/* Estilo de cada item da lista */
+.item {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  color: black;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.item:hover {
+  background: rgb(236, 146, 146); /* Destaque ao passar o mouse */
+}
+
+.item span {
+  text-align: start;
+  width: 100%;
+  color: white;
+  margin-right: 10px;
+  padding: 10px 15px;
+}
+
+/* Item concluído (tarefa marcada) */
+.item.completo {
+  text-align: start;
+  display: flex;
+  justify-content: space-between;
+  background: rgb(119, 119, 119);
+  border: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.item.completo span {
+  width: 100%;
+  color: white;
+  margin-right: 10px;
+  padding: 10px 15px;
+  text-decoration: line-through; /* Riscado */
+}
+
+/* Botão de deletar tarefa individual */
+button.del {
+  background: none;
+  color: rgb(235, 0, 0);
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+}
+
+button.del:hover {
+  background: rgb(139, 80, 80);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+}
+
+/* Botão de deletar todas as tarefas */
+button.deleteAll {
+  border: 1px solid black;
+  background: none;
+  padding: 15px;
+  color: red;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+button.deleteAll:hover {
+  background: rgb(179, 64, 64);
+  color: white;
+}
+
+/* Ícone central exibido quando a lista está vazia */
+.icone-central {
+  max-width: 100%;
+}
+
+/* Responsividade para telas menores */
+@media screen and (max-width: 900px) {
+  form {
+    width: 100%;
+  }
+  .listaTarefas {
+    width: 100%;
+  }
+}
